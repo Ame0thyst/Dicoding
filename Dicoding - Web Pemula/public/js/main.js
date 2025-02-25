@@ -20,7 +20,6 @@ function toggleDropdown() {
   dropdown.classList.toggle('active');
 }
 
-// Tutup dropdown saat klik di luar
 document.addEventListener('click', function(event) {
   const dropdown = document.getElementById('dropdown');
   const mobileNav = document.querySelector('.mobile-nav');

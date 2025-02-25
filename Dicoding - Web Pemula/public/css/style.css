@@ -25,11 +25,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; /* Untuk positioning dropdown */
+  position: relative; /
 }
 
 .desktop-nav {
-  display: none; /* Sembunyikan desktop-nav secara default */
+  display: none; 
   gap: 2rem;
 }
 
@@ -71,21 +71,20 @@ header {
   display: flex;
 }
 
-/* Desktop View */
+
 @media (min-width: 768px) {
   .desktop-nav {
-    display: flex; /* Tampilkan nav di desktop */
+    display: flex;
   }
 
   .mobile-nav {
-    display: none; /* Sembunyikan menu mobile di desktop */
+    display: none;
   }
 }
 
-/* Mobile View */
 @media (max-width: 767px) {
   .dropdown {
-    width: auto; /* Sesuaikan lebar dengan konten */
+    width: auto;
     min-width: 150px;
     right: 1rem;
   }
