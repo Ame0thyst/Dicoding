@@ -1,5 +1,7 @@
-//username : gilangwiko150
+//  gilangwiko1501
 
-/* Goal tahun ini:
+/*
+Goal tahun ini:
 1. Belajar JavaScript.
- 2. Menjadi Front-End atau Back-End Developer. */
+2. Menjadi Front-End atau Back-End Developer.
+*/
