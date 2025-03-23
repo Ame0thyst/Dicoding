@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+
+:root {
+  --ramadan-gold: #ffd700;
+  --ramadan-green: #005f41;
+  --ramadan-night: #0a2e36;
+  --ramadan-moon: #f4f3ee;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    135deg,
+    var(--ramadan-night) 0%,
+    var(--ramadan-green) 100%
+  );
+  min-height: 100vh;
+  color: var(--ramadan-moon);
+  margin: 0;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 0 0 15px var(--ramadan-gold);
+  position: relative;
+  margin: 30px 0;
+}
+
+header h1::after {
+  content: "📖";
+  position: absolute;
+  right: 10%;
+  top: -20px;
+  filter: drop-shadow(0 0 5px var(--ramadan-gold));
+}
+
+section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 800px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: "🌙";
+  position: absolute;
+  font-size: 100px;
+  opacity: 0.1;
+  right: -30px;
+  top: -30px;
+}
+
+h2 {
+  color: var(--ramadan-gold);
+  border-left: 5px solid var(--ramadan-gold);
+  padding-left: 15px;
+  margin-top: 0;
+}
+
+form > div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--ramadan-gold);
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--ramadan-gold);
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: white;
+  box-shadow: 0 0 15px var(--ramadan-gold);
+}
+
+button {
+  background: linear-gradient(
+    45deg,
+    var(--ramadan-green),
+    var(--ramadan-night)
+  );
+  border: 2px solid var(--ramadan-gold);
+  color: var(--ramadan-gold);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+  background: linear-gradient(
+    45deg,
+    var(--ramadan-night),
+    var(--ramadan-green)
+  );
+}
+
+[data-testid^="bookItem"] {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+[data-testid^="bookItem"]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-testid="bookItemTitle"] {
+  color: var(--ramadan-gold);
+  margin: 0 0 10px 0;
+  font-size: 1.4em;
+}
+
+[data-testid="bookItemIsCompleteButton"] {
+  background: linear-gradient(45deg, #27ae60, #005f41);
+  border-color: #27ae60;
+}
+
+[data-testid="bookItemDeleteButton"] {
+  background: linear-gradient(45deg, #e74c3c, #8b0000);
+  border-color: #e74c3c;
+}
+
+[data-testid="bookItemEditButton"] {
+  background: linear-gradient(45deg, #f39c12, #ff8c00);
+  border-color: #f39c12;
+}
+
+#searchBook {
+  position: relative;
+}
+
+#searchBook:before {
+  content: "\f002";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ramadan-gold);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+form button {
+  display: block;
+  margin: 15px auto;
+}
+[data-testid="bookItem"] div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+[data-testid="bookItem"]::after {
+  content: "🕌";
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0.1;
+  font-size: 40px;
+}
+
+.ramadan-pattern {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(
+      circle at 10% 10%,
+      rgba(255, 215, 0, 0.05) 1%,
+      transparent 2%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(255, 215, 0, 0.05) 1%,
+      transparent 2%
+    );
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+//
+/* Notification Popup */
+.ramadan-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 95, 65, 0.9);
+  color: var(--ramadan-gold);
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: 2px solid var(--ramadan-gold);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  display: none;
+  animation: slideIn 0.5s ease-out;
+  z-index: 1000;
+}
+
+/* Confirmation Modal */
+.ramadan-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 46, 54, 0.8);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--ramadan-night);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid var(--ramadan-gold);
+  text-align: center;
+}
+
+.modal-buttons button {
+  margin: 10px;
+  min-width: 80px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
